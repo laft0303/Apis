@@ -1,9 +1,16 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Tab Two
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+    <ion-card *ngFor="let pais of paises">
+        <ion-card-header><img src="{{pais.flag}}">
+        </ion-card-header>
+        <ion-card-title>{{pais.name}}</ion-card-title>
+        <ion-card-subtitle>{{pais.capital}}</ion-card-subtitle>
+    </ion-card>
+</ion-content>
